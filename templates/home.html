@@ -1,10 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервис по аренде авто</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input[type="text"] {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        .search-bar input[type="submit"] {
+            padding: 5px 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .category {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        .category img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>CyberDrive</h1>
+    </header>
+    <nav>
+        <div>
+            <a href="#">Главная</a>
+            <a href="#">Автомобили</a>
+            <a href="#">Личный кабинет</a>
+            <a href="#">Контакты</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Поиск авто...">
+            <input type="submit" value="Найти">
+        </div>
+    </nav>
+    <div class="container">
+        <div class="categories">
+            {% load static %}
+            <div class="category">
+                <img src="{% static 'images/sedan.jpg' %}" alt="Седаны">
+                <h2>Седаны</h2>
+                <p>Удобные и стильные седаны для вашего комфорта.</p>
+            </div>
 
+            <div class="category">
+                <img src="{% static 'images/hatchback.jpg' %}" alt="Хэтчбеки">
+                <h2>Хэтчбеки</h2>
+                <p>Компактные автомобили для городских поездок.</p>
+            </div>
+
+            <div class="category">
+                <img src="{% static 'images/wagon.jpg' %}" alt="Универсалы">
+                <h2>Универсалы</h2>
+                <p>Просторные универсалы для любых нужд.</p>
+            </div>
+
+            <div class="category">
+                <img src="{% static 'images/coupe.jpg' %}" alt="Купе">
+                <h2>Купе</h2>
+                <p>Спортивные купе для ярких впечатлений.</p>
+            </div>
+
+            <div class="category">
+                <img src="{% static 'images/convertible.jpg' %}" alt="Кабриолеты">
+                <h2>Кабриолеты</h2>
+                <p>Стильные кабриолеты для незабываемых поездок.</p>
+            </div>
+
+            <div class="category">
+                <img src="{% static 'images/roadster.jpg' %}" alt="Родстеры">
+                <h2>Родстеры</h2>
+                <p>Эксклюзивные родстеры для уникальных поездок.</p>
+            </div>
+
+            <div class="category">
+                <img src="{% static 'images/suv.jpg' %}" alt="Внедорожники">
+                <h2>Внедорожники</h2>
+                <p>Мощные внедорожники для любых дорог.</p>
+            </div>
+
+            <div class="category">
+                <img src="{% static 'images/pickup.jpg' %}" alt="Пикапы">
+                <h2>Пикапы</h2>
+                <p>Надежные пикапы для любых задач.</p>
+            </div>
+
+            <div class="category">
+                <img src="{% static 'images/minivan.jpg' %}" alt="Минивэны">
+                <h2>Минивэны</h2>
+                <p>Просторные минивэны для всей семьи.</p>
+            </div>
+
+            <div class="category">
+                <img src="{% static 'images/van.jpg' %}" alt="Фургоны">
+                <h2>Фургоны</h2>
+                <p>Удобные фургоны для перевозки грузов.</p>
+            </div>
+
+            <div class="category">
+                <img src="{% static 'images/limousine.jpg' %}" alt="Лимузины">
+                <h2>Лимузины</h2>
+                <p>Роскошные лимузины для особых мероприятий.</p>
+            </div>
+
+            <div class="category">
+                <img src="{% static 'images/minibus.jpg' %}" alt="Микроавтобусы">
+                <h2>Микроавтобусы</h2>
+                <p>Просторные микроавтобусы для больших компаний.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

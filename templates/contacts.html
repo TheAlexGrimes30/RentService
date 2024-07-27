@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+<div class="contact-container">
+    <h2>Свяжитесь с нами</h2>
+    <div class="contact-info">
+        <h3>Адрес:</h3>
+        <p>ул. Примерная, 123, г. Москва, Россия</p>
+
+        <h3>Телефон:</h3>
+        <p>+7 (123) 456-78-90</p>
+
+        <h3>Email:</h3>
+        <p>sagopien04@gmail.com</p>
+    </div>
+</div>
+{% endblock %}
+
+<style>
+.contact-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+    margin-top: 10px;
+}
+</style>
